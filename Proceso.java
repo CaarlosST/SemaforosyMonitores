@@ -17,14 +17,14 @@ public class Proceso extends Thread {
 
 	public void run() {
 		while (true) {
-			int recursosAUsar = rmdRecursos();
-			recursos.reservar(recursosAUsar, id);
+			rmdRecursos()
+			recursos.reservar(rmdRecursos(), id);
 			try {
 				sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			recursos.liberar(recursosAUsar,id);
+			recursos.liberar(rmdRecursos(),id);
 		}
 	}
 
