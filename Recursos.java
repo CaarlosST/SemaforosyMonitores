@@ -7,14 +7,6 @@ public class Recursos {
 	private Semaphore hayRecursoLibre = new Semaphore(1, true);
 	private Semaphore hayRecursoOcupado = new Semaphore(0, true);
 
-	public Semaphore getRecursosLibres() {
-		return hayRecursoLibre;
-	}
-
-	public Semaphore getRecursosOcupados() {
-		return hayRecursoOcupado;
-	}
-
 	public void reservar(int n, int proceso) {
 		try {
 			hayRecursoLibre.acquire();
