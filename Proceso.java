@@ -32,7 +32,7 @@ public class Proceso extends Thread {
 		Recursos recursos = new Recursos();
 		int numeroDeProces = 3 ;
 		for (int i = 0; i < numeroDeProces; i++) {
-			new Proceso(recursos, (i + 1)).start(); // Inicia el hilo Proceso con la instancia de Recursos
+			new Proceso(recursos, (i + 1)).start(); 
 		}
 	}
 }
